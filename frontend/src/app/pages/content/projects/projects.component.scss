@@ -1,0 +1,43 @@
+.container {
+    margin-top: 5vh;
+    width: 80vw;
+    height: 95vh;
+    display: flex;
+}
+
+.project-boxes {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    height: 85vh;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 2px black;
+    padding: 10px 10px 5px 10px;
+    margin-right: 5vh;
+    .project-picture {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+}
+
+.content {
+    .header {
+        h2 {
+            font-size: 30px;
+            margin-bottom: 3px;
+        }
+        .duration {
+            padding-left: 2px;
+            font-size: 12px;
+        }
+        .github {
+            width: 20px;
+            margin-left: auto;
+            height: auto;
+            transform: translateY(25%)
+        }
+    }
+}
+
+.content {}

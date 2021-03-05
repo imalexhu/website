@@ -1,0 +1,90 @@
+.container {
+    margin: auto;
+    margin-top: 10vh;
+    margin-left: 15vw;
+    width: 50vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 1px 3px black;
+    padding: 10px;
+    h1 {
+        font-size: 40px;
+    }
+    .form {
+        form {
+            margin-top: 20px;
+            width: 100%;
+            height: 100%;
+            .name {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 20%;
+                #prefix {
+                    padding: 1px 2px;
+                    text-align-last: center;
+                    text-align: center;
+                    height: 66px;
+                    font-size: 20px;
+                    width: 20%;
+                    margin-right: 5px;
+                }
+                input {
+                    font-size: 20px;
+                    height: 60px;
+                    width: 40%;
+                    margin-left: 10px;
+                }
+            }
+            .email {
+                h3 {
+                    height: 20%;
+                    margin: 10px 0px;
+                }
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 25%;
+                width: 100%;
+                padding-bottom: 10px;
+                input {
+                    font-size: 20px;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            .message {
+                margin-top: 10px;
+                width: 100%;
+                height: 60%;
+                #message {
+                    font-size: 20px;
+                    margin: auto;
+                    width: 100%;
+                    height: 100%;
+                }
+                margin-bottom: 20px;
+            }
+        }
+        .button {
+            display: flex;
+            justify-content: center;
+            height: 50px;
+            width: 100%;
+            .gap {
+                width: 6%;
+                height: 100%;
+            }
+            button {
+                cursor: pointer;
+                width: 47%;
+                height: 100%;
+            }
+        }
+    }
+}

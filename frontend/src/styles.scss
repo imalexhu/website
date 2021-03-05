@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+
+$orange: #FA9236;
+$dark:rgb(61, 61, 61);
+$light-gray: #f9f9f9;
+html,
+body {
+    font-size: 16px;
+    height: 100%;
+    background-color: $light-gray;
+    margin: 0;
+}
+
+::-webkit-scrollbar-track {
+    background-color: $dark;
+}
+
+::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $orange;
+}

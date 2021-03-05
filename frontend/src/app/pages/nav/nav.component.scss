@@ -1,0 +1,197 @@
+@import "../../../styles.scss";
+.nav {
+    font-size: 0px;
+    background-color: $dark;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    &:hover {
+        .nav-items>.nav-item>.nav-link {
+            &:hover {
+                .icon {
+                    path {
+                        stroke: $orange;
+                        fill: $orange;
+                    }
+                }
+                .link-text {
+                    color: $orange;
+                }
+            }
+            .link-text {
+                transition: opacity 2s ease-in-out;
+                opacity: 1;
+                width: 50%;
+                display: block;
+                color: white;
+            }
+        }
+        .links>div>.link-text {
+            display: block;
+        }
+    }
+    .logo {
+        width: 100%;
+        &:hover {
+            cursor: pointer;
+        }
+        polyline {
+            stroke: $orange;
+        }
+        .path {
+            stroke: $orange;
+            stroke-dashoffset: 0;
+            stroke-dasharray: 100%;
+            animation: dash 8s linear;
+            &:nth-child(9) {
+                animation-delay: -2.25s;
+            }
+            &:nth-child(9) {
+                animation-delay: -2.25s;
+            }
+            &:nth-child(8) {
+                animation-delay: -1.75s;
+            }
+            &:nth-child(7) {
+                animation-delay: -1.50s;
+            }
+            &:nth-child(6) {
+                animation-delay: -1.35s;
+            }
+            &:nth-child(5) {
+                animation-delay: -1.25s;
+            }
+            &:nth-child(4) {
+                animation-delay: -1.00s;
+            }
+            &:nth-child(3) {
+                animation-delay: -0.75s;
+            }
+            &:nth-child(2) {
+                animation-delay: -0.5s;
+            }
+            &:nth-child(1) {
+                animation-delay: -0.25s;
+            }
+        }
+        @keyframes dash {
+            0%,
+            50% {
+                stroke-dashoffset: 100%;
+            }
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+    }
+    .nav-items {
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        list-style: none;
+        width: 100%;
+        .nav-item {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            width: 100%;
+            height: 100%;
+            .nav-link {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 5rem;
+                color: white;
+                text-decoration: none;
+                .link-text {
+                    opacity: 0;
+                    font-size: 1.5vw;
+                    display: none;
+                }
+                svg {
+                    width: 50%;
+                }
+                .icon {
+                    min-width: 5rem;
+                    max-width: 8rem;
+                    color: white;
+                    height: 100%;
+                    path {
+                        stroke: white;
+                        fill: white;
+                    }
+                }
+            }
+        }
+    }
+    .links {
+        font-size: 16px;
+        margin-top: auto;
+        background: $dark;
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center !important;
+    }
+    .github {
+        display: flex;
+        margin: auto;
+        &:hover {
+            filter: invert(1);
+        }
+        img {
+            filter: invert(1);
+            width: 5rem;
+            height: auto;
+        }
+        .link-text {
+            opacity: 1;
+            font-size: 22px;
+            display: none;
+        }
+    }
+    .email {
+        display: flex;
+        margin: auto;
+        min-width: 5rem;
+        max-width: 8rem;
+        &:hover {
+            svg {
+                path {
+                    stroke: $orange;
+                    fill: $orange;
+                }
+            }
+        }
+        svg {
+            path {
+                fill: white;
+                stroke: white;
+            }
+        }
+    }
+}
+
+.slide-out {
+    animation: 0.5 slide-right 0.5s forwards;
+}
+
+@keyframes slide-right {
+    from {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(10%);
+        opacity: 1;
+    }
+}
