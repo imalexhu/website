@@ -1,6 +1,7 @@
-import { animation } from '@angular/animations';
-import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { ActivatedRoute, NavigationStart, Router } from '@angular/router';
+import { ContentComponent } from '../content/content.component';
+
 
 
 @Component({
@@ -10,7 +11,11 @@ import { Router } from '@angular/router';
 })
 export class NavComponent implements OnInit {
 
-  constructor(private router: Router, private render: Renderer2) { }
+  url:string = "";
+
+  constructor(private router: Router, private render: Renderer2, private route:ActivatedRoute) {
+
+   }
 
   // @ViewChild('.path') path!:ElementRef
 
@@ -22,8 +27,25 @@ export class NavComponent implements OnInit {
     github.children[0].setAttribute('src', '../../../assets/GitHub-Mark-120px-plus.png')
   }
 
+  //Deletes the about-me section in content 
+  removeContent(){
+    console.log("Remove content")
+    let temp = this.route.parent?.children[0]
+    console.log(temp)
+    console.log("Remove content end")
+  }
+
 
   async ngOnInit(): Promise<void> {
+    
+    await this.removeContent()
+
+
+    this.router.events.subscribe((res)=>{
+      if(res instanceof NavigationStart){
+        this.url = res.url
+      }
+    })
 
 
     /*Sets it so that when a sub catergory is clicked the logo load 
@@ -34,7 +56,7 @@ export class NavComponent implements OnInit {
     if (this.router.url !== "/") {
       let delay = 0
       for (let i = 0; i < paths.length; i++) {
-        this.render.setStyle(paths[i], "animation", "dash 3.25s linear")
+        this.render.setStyle(paths[i], "animation", "dash 3.75s linear")
 
         this.render.setStyle(paths[i], "animation-delay", `${delay}s`)
         delay -= 0.25;

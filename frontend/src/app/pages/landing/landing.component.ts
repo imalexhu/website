@@ -13,6 +13,7 @@ export class LandingComponent implements OnInit {
   constructor(private router:Router) { }
 
   async ngOnInit(): Promise<void> {
+
     await this.intro;
     if(this.router.url!=="/"){
       this.intro.nativeElement.remove();
@@ -21,6 +22,7 @@ export class LandingComponent implements OnInit {
       tl.to('.hide-text', { y: '0%', durations: 1, stagger: 0.25 })
       tl.to('.transition', { y: '-100%', durations: 1, delay: 0.5 })
       tl.to('.intro', { y: '-100%', durations: 1.5, }, "-=.3")
+
     }
   }
 

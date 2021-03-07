@@ -4,19 +4,59 @@
     width: 80vw;
     height: 95vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    .left {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: auto;
+        margin-right: 5%;
+    }
+    .right {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: auto;
+    }
 }
 
 .info {
     padding: 5px;
     width: 100%;
     height: auto;
-    max-height: 15vh;
+    min-height: 15vh;
     box-shadow: 0 0 5px 2px black;
     border-radius: 5px;
     margin: 10px 0px;
     .title {
+        color: $orange;
         margin-top: 5px;
+        margin-bottom: 5px;
     }
-    content {}
+    .gpa {
+        text-align: right;
+    }
+    .content {
+        margin: 5px 2px;
+        height: auto;
+        .mini-header {
+            font-weight: bold;
+            font-size: 20px;
+        }
+    }
+}
+
+#cancer-council {
+    border-radius: 5px;
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 55%;
+    height: auto;
+}
+
+div.photo-describer {
+    text-align: right;
+    color: gray;
 }
