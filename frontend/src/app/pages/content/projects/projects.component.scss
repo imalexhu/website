@@ -1,3 +1,4 @@
+@import "../../../../styles.scss";
 .container {
     margin-top: 5vh;
     width: 80vw;
@@ -22,28 +23,43 @@
 }
 
 .content {
+    height: 100%;
     .header {
         h2 {
+            color: $orange;
             font-size: 30px;
             margin-bottom: 3px;
         }
-        .duration {
-            padding-left: 2px;
-            font-size: 12px;
-        }
-        .github {
-            width: 20px;
-            margin-left: auto;
-            height: auto;
-            transform: translateY(25%)
+        .interactive {
+            .duration {
+                display: inline;
+                width: 100%;
+                text-align: right;
+                padding-left: 2px;
+                font-size: 12px;
+            }
+            .github {
+                display: inline;
+                width: 20px;
+                margin-left: auto;
+                height: auto;
+                transform: translateY(25%)
+            }
+            &:hover {
+                cursor: pointer;
+                .duration {
+                    color: $orange;
+                }
+            }
         }
     }
     .body {
+        margin-top: auto;
         font-size: 0.9rem;
     }
     .key-skills {
         padding-left: 20px;
-        margin: 5px 0;
+        margin-top: 5px;
         font-size: 0.8rem;
     }
 }
