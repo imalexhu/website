@@ -20,46 +20,48 @@
         height: auto;
         border-radius: 5px;
     }
-}
-
-.content {
-    height: 100%;
-    .header {
-        h2 {
-            color: $orange;
-            font-size: 30px;
-            margin-bottom: 3px;
-        }
-        .interactive {
-            .duration {
-                display: inline;
-                width: 100%;
-                text-align: right;
-                padding-left: 2px;
-                font-size: 12px;
+    .content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        .header {
+            h2 {
+                color: $orange;
+                font-size: 30px;
+                margin-bottom: 3px;
             }
-            .github {
-                display: inline;
-                width: 20px;
-                margin-left: auto;
-                height: auto;
-                transform: translateY(25%)
-            }
-            &:hover {
-                cursor: pointer;
+            .interactive {
                 .duration {
-                    color: $orange;
+                    display: inline;
+                    width: 100%;
+                    text-align: right;
+                    padding-left: 2px;
+                    font-size: 12px;
+                }
+                .github {
+                    display: inline;
+                    width: 20px;
+                    margin-left: auto;
+                    height: auto;
+                    transform: translateY(25%)
+                }
+                &:hover {
+                    cursor: pointer;
+                    .duration {
+                        color: $orange;
+                    }
                 }
             }
         }
-    }
-    .body {
-        margin-top: auto;
-        font-size: 0.9rem;
-    }
-    .key-skills {
-        padding-left: 20px;
-        margin-top: 5px;
-        font-size: 0.8rem;
+        .body {
+            margin-top: auto;
+            margin-bottom: auto;
+            font-size: 1.2rem;
+        }
+        .key-skills {
+            padding-left: 20px;
+            margin-top: 5px;
+            font-size: 0.8rem;
+        }
     }
 }
