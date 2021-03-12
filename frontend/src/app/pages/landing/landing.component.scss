@@ -6,67 +6,63 @@
     height: 100%;
 }
 
-app-content {
-    display: flex;
-    background-color: $light-gray;
-    height: 100%;
-    width: 105%;
-}
-
-app-nav {
-    margin-right: 3%;
-    height: 100vh;
-    width: 17%;
-    background-color: $dark;
-    &:hover {
-        width: 20%;
-        transition: width 0.2s ease-in-out;
-    }
-}
-
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
-}
-
-.intro {
-    background: $dark;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .hide {
-        background: $dark;
-        overflow: hidden;
+    app-content {
+        display: flex;
+        background-color: $light-gray;
+        height: 100%;
+        width: 85%;
     }
-    .hide-text {
-        transform: translateY(100%);
-        display: inline-block;
-        color: aliceblue;
-        font-family: "Heebo", sans-serif;
-        font-size: 3rem;
-    }
-    .special {
-        color: $orange;
-        font-family: "Lobster" !important;
+    app-nav {
+        height: 100%;
+        width: 15%;
+        background-color: $dark;
+        &:hover {
+            width: 20%;
+            transition: width 0.2s ease-in-out;
+        }
     }
 }
 
-.transition {
-    background: $orange;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    transform: translateY(100%);
-}
+// .intro {
+//     background: $dark;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     .hide {
+//         background: $dark;
+//         overflow: hidden;
+//     }
+//     .hide-text {
+//         transform: translateY(100%);
+//         display: inline-block;
+//         color: aliceblue;
+//         font-family: "Heebo", sans-serif;
+//         font-size: 3rem;
+//     }
+//     .special {
+//         color: $orange;
+//         font-family: "Lobster" !important;
+//     }
+// }
+// .transition {
+//     background: $orange;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     display: flex;
+//     transform: translateY(100%);
+// }

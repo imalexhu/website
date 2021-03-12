@@ -1,12 +1,13 @@
 @import "../../../styles.scss";
 .nav {
+    position: fixed;
     font-size: 0px;
     background-color: $dark;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    width: 100%;
+    width: 15%;
     &:hover {
         .nav-items>.nav-item>.nav-link {
             &:hover {
@@ -150,7 +151,7 @@
         }
         img {
             filter: invert(1);
-            width: 5rem;
+            max-width: 5rem;
             height: auto;
         }
         .link-text {
