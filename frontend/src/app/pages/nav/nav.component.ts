@@ -20,7 +20,11 @@ export class NavComponent implements OnInit {
   // @ViewChild('.path') path!:ElementRef
 
   onHover(github: HTMLElement) {
-    github.children[0].setAttribute('src', '../../../assets/GitHub-Mark-64px.png')
+    let icon = github.children[0]
+    icon.setAttribute('src', '../../../assets/GitHub-Mark-64px.png')
+    this.render.setStyle(icon, "width", "800px")
+    this.render.setStyle(icon, "height", "auto")
+    console.log(icon);
   }
 
   unHover(github: HTMLElement) {
@@ -29,10 +33,8 @@ export class NavComponent implements OnInit {
 
   //Deletes the about-me section in content 
   removeContent(){
-    console.log("Remove content")
     let temp = this.route.parent?.children[0]
     console.log(temp)
-    console.log("Remove content end")
   }
 
 
