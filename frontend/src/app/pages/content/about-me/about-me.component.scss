@@ -12,7 +12,6 @@
 .highlited {
     background: url('../../../../assets/brush-stroke-banner-3.png');
     background-repeat: no-repeat;
-    background-size: contain;
     padding: 8px 0;
     z-index: -1;
 }
@@ -23,9 +22,7 @@ i {
 
 .story-card {
     display: block;
-    width: auto;
-    min-width: 1200px;
-    max-width: 75vw;
+    max-width: 80vw;
     max-height: 40em;
     display: flex;
     flex-direction: row;

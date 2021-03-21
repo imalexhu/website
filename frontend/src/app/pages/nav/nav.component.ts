@@ -24,7 +24,6 @@ export class NavComponent implements OnInit {
     icon.setAttribute('src', '../../../assets/GitHub-Mark-64px.png')
     this.render.setStyle(icon, "width", "800px")
     this.render.setStyle(icon, "height", "auto")
-    console.log(icon);
   }
 
   unHover(github: HTMLElement) {
