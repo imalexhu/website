@@ -1,0 +1,73 @@
+@import "../../styles.scss";
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: $orange;
+}
+
+.image {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 100%;
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    h1 {
+        font-family: 'Segoe UI';
+        font-style: italic;
+        opacity: 0;
+        position: absolute;
+        font-size: 70px;
+        top: 80%;
+        left: 0%;
+        transform: translate(10%, -30%);
+        color: white;
+    }
+}
+
+.intro {
+    background: $dark;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .hide {
+        background: $dark;
+        overflow: hidden;
+    }
+    .hide-text {
+        transform: translateY(100%);
+        display: inline-block;
+        color: aliceblue;
+        font-family: "Heebo", sans-serif;
+        font-size: 3rem;
+    }
+    .special {
+        color: $orange;
+        font-family: "Lobster" !important;
+    }
+}
+
+.transition {
+    background: $orange;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transform: translateY(100%);
+}
