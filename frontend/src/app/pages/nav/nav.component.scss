@@ -144,6 +144,7 @@
         justify-content: center !important;
     }
     .github {
+        cursor: pointer;
         display: flex;
         margin: auto;
         &:hover {
@@ -161,6 +162,7 @@
         }
     }
     .email {
+        cursor: pointer;
         display: flex;
         margin: auto;
         min-width: 5rem;
