@@ -33,6 +33,10 @@ section {
     }
 }
 
+* {
+    cursor: pointer;
+}
+
 .intro {
     background: $dark;
     position: fixed;
