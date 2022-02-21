@@ -1,64 +1,90 @@
 @import "../../../../styles.scss";
+
 .container {
-    margin-left: 2em;
-    margin-top: 5vh;
-    width: 90%;
-    height: 90%;
-    display: flex;
+    margin-left   : 2em;
+    margin-top    : 5vh;
+    width         : 90%;
+    height        : 90%;
+    display       : flex;
     flex-direction: row;
+
     .left {
-        display: flex;
+        display       : flex;
         flex-direction: column;
-        width: 50%;
-        height: auto;
-        margin-right: 3%;
+        width         : 50%;
+        height        : auto;
+        margin-right  : 3%;
     }
+
     .right {
-        display: flex;
+        display       : flex;
         flex-direction: column;
-        width: 50%;
-        height: auto;
+        width         : 50%;
+        height        : auto;
     }
 }
 
 .info {
-    padding: 20px;
-    height: auto;
-    max-height: 1000px;
-    box-shadow: 0 0 5px 2px black;
+    padding      : 20px;
+    height       : auto;
+    box-shadow   : 0 0 5px 2px black;
     border-radius: 5px;
-    margin: 10px 0px;
+    margin       : 10px 0px;
+
     .title {
-        color: $orange;
-        margin-top: 5px;
+        color        : $orange;
+        margin-top   : 5px;
         margin-bottom: 5px;
     }
+
     .gpa {
         font-weight: bold;
-        color: black;
-        font-size: 16px;
+        color      : black;
+        font-size  : 16px;
     }
+
     .content {
         margin: 5px 2px;
         height: auto;
+
         .mini-header {
             font-weight: bold;
-            font-size: 20px;
+            font-size  : 20px;
         }
     }
 }
 
 #cancer-council {
     border-radius: 5px;
-    margin-top: 10px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 55%;
-    height: auto;
+    margin-top   : 10px;
+    display      : block;
+    margin-left  : auto;
+    margin-right : auto;
+    width        : 55%;
+    height       : auto;
 }
 
 div.photo-describer {
     text-align: center;
-    color: gray;
+    color     : gray;
+}
+
+div.studying {
+    font-weight    : bold;
+    display        : flex;
+    justify-content: center;
+
+    .left {
+        text-align: left;
+    }
+
+    .right {
+        text-align: right;
+    }
+}
+
+div.work-history {
+    background-color: lightgray;
+    border-radius   : 5px;
+    padding         : 5px
 }
